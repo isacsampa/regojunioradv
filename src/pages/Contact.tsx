@@ -71,7 +71,7 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="font-medium text-white mb-1">Horário de Atendimento</h3>
-                    <p className="text-neutral-400 text-sm">[PREENCHER DADO REAL]</p>
+                    <p className="text-neutral-400 text-sm">Segunda a Sexta: 08:30–12:30, 15:30–17:00</p>
                   </div>
                 </div>
               </div>
@@ -90,6 +90,7 @@ export function Contact() {
                 src={`https://maps.google.com/maps?q=${encodeURIComponent(siteConfig.address + ', ' + siteConfig.city + ' - ' + siteConfig.state)}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
                 width="100%"
                 height="100%"
+                className="w-full h-full grayscale invert-[0.9] opacity-80 hover:opacity-100 hover:grayscale-0 hover:invert-0 transition-all duration-500"
                 style={{ border: 0 }}
                 allowFullScreen={true}
                 loading="lazy"
