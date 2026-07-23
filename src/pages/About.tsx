@@ -52,13 +52,15 @@ export function About() {
             
             <div className="space-y-8">
               <div className="aspect-[4/3] bg-[#0c0a09] rounded-sm overflow-hidden border border-wood-900/50 relative">
-                 <div className="absolute inset-0 flex flex-col items-center justify-center text-white0">
-                    <span className="font-medium mb-2">[PREENCHER DADO REAL]</span>
-                    <span className="text-sm">Foto da fachada ou recepção do escritório</span>
-                 </div>
-              </div>
-              
-              <div>
+              <img
+                src="/images/escritorio.jpeg"
+                alt="Fachada do escritório Júnior Rêgo Advocacia"
+                className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+            
+            <div>
                 <h3 className="font-serif text-2xl font-medium text-white mb-4">Estrutura de Atendimento</h3>
                 <p className="text-neutral-400 leading-relaxed mb-6">
                   Nosso espaço físico em Esperantina foi pensado para garantir conforto, privacidade e sigilo para nossos clientes. Além do atendimento presencial, contamos com infraestrutura completa para reuniões virtuais seguras, atendendo demandas de toda a região norte do Piauí e outros estados.
