@@ -200,44 +200,5 @@ O Tribunal do Júri é o juiz natural dos crimes dolosos contra a vida, mas some
     readTime: "10 min",
     image: "/capa-artigo.png",
     isMarkdown: true
-  },
-  {
-    id: "1",
-    title: "O que é Audiência de Custódia e como funciona?",
-    slug: "o-que-e-audiencia-de-custodia",
-    summary: "Entenda os principais objetivos da audiência de custódia, os direitos do detido e o papel do advogado criminalista neste momento processual.",
-    content: "A audiência de custódia é uma garantia de que a pessoa presa em flagrante seja apresentada rapidamente a um juiz, garantindo seus direitos fundamentais. [CONTEÚDO DE EXEMPLO]",
-    author: "Francisco das Chagas Rêgo Júnior",
-    category: "Direito Criminal",
-    date: "2023-10-15",
-    readTime: "4 min",
-    image: "[PREENCHER DADO REAL]",
-    isMarkdown: false
-  },
-  {
-    id: "2",
-    title: "Aposentadoria por Idade: Regras e Requisitos",
-    slug: "aposentadoria-por-idade-regras",
-    summary: "Quais são as atuais exigências do INSS para a concessão da aposentadoria por idade após a reforma da previdência.",
-    content: "Com a Reforma da Previdência, as regras para a aposentadoria por idade sofreram alterações significativas. [CONTEÚDO DE EXEMPLO]",
-    author: "Francisco das Chagas Rêgo Júnior",
-    category: "Direito Previdenciário",
-    date: "2023-11-20",
-    readTime: "5 min",
-    image: "[PREENCHER DADO REAL]",
-    isMarkdown: false
-  },
-  {
-    id: "3",
-    title: "Guarda Compartilhada vs. Guarda Unilateral",
-    slug: "guarda-compartilhada-vs-unilateral",
-    summary: "Diferenças práticas entre as modalidades de guarda e o que a justiça prioriza nos processos de divórcio.",
-    content: "O Direito de Família brasileiro estabelece a guarda compartilhada como regra geral, buscando o melhor interesse da criança. [CONTEÚDO DE EXEMPLO]",
-    author: "Francisco das Chagas Rêgo Júnior",
-    category: "Direito de Família",
-    date: "2023-12-05",
-    readTime: "6 min",
-    image: "[PREENCHER DADO REAL]",
-    isMarkdown: false
   }
 ];
