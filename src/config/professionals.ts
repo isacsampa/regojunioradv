@@ -5,7 +5,7 @@ export const professionals = [
     oab: "OAB/PI 18.664",
     bio: "Profissional com atuação dedicada ao atendimento jurídico estratégico e humanizado. Preza pela transparência, estudo minucioso de cada caso e comunicação direta com o cliente.",
     areas: ["Direito Criminal", "Direito de Família", "Direito Previdenciário", "Direito Civil"],
-    photo: "/images/advogado.jpg",
+    photo: "/images/advogadoregojunior.jpeg",
     linkedin: "[PREENCHER DADO REAL]",
   }
 ];
