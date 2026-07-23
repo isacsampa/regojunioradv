@@ -112,12 +112,12 @@ export function Home() {
             
             <div className="relative">
               <div className="aspect-[4/3] bg-wood-950 rounded-sm overflow-hidden border border-wood-900/50">
-                <img
-                  src="/images/escritorio.jpeg"
-                  alt="Fachada do escritório Júnior Rêgo Advocacia"
-                  className="w-full h-full object-cover object-center"
-                  referrerPolicy="no-referrer"
-                />
+                <div className="w-full h-full flex items-center justify-center text-white0 bg-[#151515]">
+                  <div className="text-center p-4">
+                    <span className="block font-medium mb-1">[PREENCHER DADO REAL]</span>
+                    <span className="text-sm">Foto do ambiente do escritório</span>
+                  </div>
+                </div>
               </div>
               <div className="absolute -bottom-6 -left-6 bg-black p-6 border border-wood-900/50 shadow-xl rounded-sm hidden md:block">
                 <div className="flex items-center gap-4">
