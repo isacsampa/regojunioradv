@@ -1,0 +1,9 @@
+{
+  "name": "Júnior Rêgo Advocacia",
+  "short_name": "Júnior Rêgo",
+  "description": "Atuação jurídica estratégica, responsável e próxima.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#020617"
+}

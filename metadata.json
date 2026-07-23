@@ -1,0 +1,6 @@
+{
+  "name": "Júnior Rêgo Advocacia",
+  "description": "Site institucional do escritório Júnior Rêgo Advocacia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

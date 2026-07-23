@@ -1,0 +1,15 @@
+export const siteConfig = {
+  name: "Júnior Rêgo Advocacia",
+  legalName: "Júnior Rêgo Advocacia",
+  responsibleLawyer: "Francisco das Chagas Rêgo Júnior",
+  oab: "OAB/PI 18.664",
+  city: "Esperantina",
+  state: "PI",
+  whatsappNumber: "5586994232478",
+  phoneDisplay: "(86) 99423-2478",
+  email: "juniorregod@gmail.com",
+  address: "R. Leonardo das Dores, 177 - Centro",
+  instagram: "https://www.instagram.com/escritorio_jr_advocacia/",
+  googleMapsUrl: "[PREENCHER DADO REAL]",
+  url: "https://www.juniorrego.adv.br",
+};
