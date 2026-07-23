@@ -113,7 +113,7 @@ export function Home() {
             <div className="relative">
               <div className="aspect-[4/3] bg-wood-950 rounded-sm overflow-hidden border border-wood-900/50">
                 <img
-                  src="/images/escritorio.jpeg"
+                  src="/images/escritorio.png"
                   alt="Fachada do escritório Júnior Rêgo Advocacia"
                   className="w-full h-full object-cover object-center"
                   referrerPolicy="no-referrer"

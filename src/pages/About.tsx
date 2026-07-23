@@ -53,7 +53,7 @@ export function About() {
             <div className="space-y-8">
               <div className="aspect-[4/3] bg-[#0c0a09] rounded-sm overflow-hidden border border-wood-900/50 relative">
               <img
-                src="/images/escritorio.jpeg"
+                src="/images/escritorio.png"
                 alt="Fachada do escritório Júnior Rêgo Advocacia"
                 className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
                 referrerPolicy="no-referrer"
