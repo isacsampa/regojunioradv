@@ -22,25 +22,27 @@ export function ContactForm() {
     setErrorMessage("")
     
     try {
-      // In a real implementation, this would call an API route (e.g. Next.js Route Handler or Express endpoint)
-      // Since we don't have a backend configured with a real Resend API key, 
-      // we'll show an error asking for configuration as requested in instructions.
-      
-      // Simulate network request
-      await new Promise(resolve => setTimeout(resolve, 800))
-      
-      throw new Error("API de envio não configurada. Por favor, adicione as credenciais no arquivo .env.")
-      
-      // Real implementation would be:
-      /*
       const response = await fetch("/api/contact", {
         method: "POST",
-        body: formData
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          phone: formData.get("phone"),
+          email: formData.get("email"),
+          city: formData.get("city"),
+          area: formData.get("area"),
+          message: formData.get("message"),
+        }),
       })
-      if (!response.ok) throw new Error("Falha ao enviar mensagem")
+      
+      if (!response.ok) {
+        throw new Error("Falha ao enviar mensagem. Tente novamente ou use o WhatsApp.")
+      }
+      
       setStatus("success")
       form.reset()
-      */
     } catch (error) {
       setStatus("error")
       setErrorMessage(error instanceof Error ? error.message : "Ocorreu um erro ao enviar sua mensagem.")
