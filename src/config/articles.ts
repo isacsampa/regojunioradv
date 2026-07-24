@@ -198,7 +198,7 @@ O Tribunal do Júri é o juiz natural dos crimes dolosos contra a vida, mas some
     category: "Direito Criminal",
     date: "2026-07-23",
     readTime: "10 min",
-    image: "/images/capa-artigo.png",
+    image: "/images/artigo.png",
     isMarkdown: true
   }
 ];
