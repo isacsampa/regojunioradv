@@ -28,7 +28,7 @@ export function Team() {
                   <div className="aspect-[3/4] bg-[#0c0a09] rounded-sm overflow-hidden border border-wood-900/50 relative">
                     {prof.photo && !prof.photo.includes("[PREENCHER") ? (
                       <img 
-                        src={prof.photo} 
+                        src={prof.photo.startsWith('/') ? `${import.meta.env.BASE_URL}${prof.photo.slice(1)}` : prof.photo} 
                         alt={`Fotografia de ${prof.name}`} 
                         className="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-500"
                         referrerPolicy="no-referrer"

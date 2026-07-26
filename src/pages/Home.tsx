@@ -164,7 +164,7 @@ export function Home() {
                     </div>
                   ) : (
                     <img 
-                      src={article.image} 
+                      src={article.image.startsWith('/') ? `${import.meta.env.BASE_URL}${article.image.slice(1)}` : article.image} 
                       alt={article.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
