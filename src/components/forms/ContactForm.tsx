@@ -22,10 +22,13 @@ export function ContactForm() {
     setErrorMessage("")
     
     try {
-      const response = await fetch("/api/contact", {
+      // Usando FormSubmit para sites estáticos
+      const emailDestino = "juniorregod@gmail.com"
+      const response = await fetch(`https://formsubmit.co/ajax/${emailDestino}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "Accept": "application/json"
         },
         body: JSON.stringify({
           name: formData.get("name"),
@@ -34,6 +37,8 @@ export function ContactForm() {
           city: formData.get("city"),
           area: formData.get("area"),
           message: formData.get("message"),
+          _subject: `Novo contato pelo site: ${formData.get("name")}`,
+          _template: "table"
         }),
       })
       

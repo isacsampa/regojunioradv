@@ -50,7 +50,7 @@ export function Header() {
           aria-label={`${siteConfig.name} - Página Inicial`}
         >
           <div className="flex items-center">
-            <img src="/images/logojr.png" alt="Júnior Rêgo Advocacia" className="h-12 w-auto object-contain" />
+            <img src="/logo.png" alt="Júnior Rêgo Advocacia" className="h-12 w-auto object-contain" />
           </div>
         </Link>
 

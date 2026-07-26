@@ -14,7 +14,7 @@ export function Footer() {
           {/* Brand */}
           <div className="flex flex-col gap-6">
             <div className="flex flex-col items-start gap-3">
-              <img src="/images/logojr.png" alt="Júnior Rêgo Advocacia" className="h-16 w-auto object-contain" />
+              <img src="/logo.png" alt="Júnior Rêgo Advocacia" className="h-16 w-auto object-contain" />
             </div>
             <p className="text-sm leading-relaxed text-neutral-400 max-w-xs">
               Atuação jurídica estratégica, responsável e próxima. 
