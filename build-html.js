@@ -375,28 +375,28 @@ const contatoContent = `
 
         <div class="bg-neutral-50 p-8 rounded-sm border border-neutral-200">
           <h2 class="font-serif text-2xl text-neutral-900 mb-6">Envie uma mensagem</h2>
-          <form id="contact-form" class="space-y-4">
+          <form id="contact-form" class="space-y-4" action="https://formspree.io/f/mykrlwql" method="POST">
             <div>
               <label class="block text-sm font-medium text-neutral-700 mb-1">Nome completo</label>
-              <input type="text" required class="w-full px-4 py-2 border border-neutral-300 rounded-sm focus:ring-2 focus:ring-neutral-900 focus:border-neutral-900 outline-none transition-all">
+              <input type="text" name="nome" required class="w-full px-4 py-2 border border-neutral-300 rounded-sm focus:ring-2 focus:ring-neutral-900 focus:border-neutral-900 outline-none transition-all">
             </div>
             <div>
               <label class="block text-sm font-medium text-neutral-700 mb-1">Telefone / WhatsApp</label>
-              <input type="tel" required class="w-full px-4 py-2 border border-neutral-300 rounded-sm focus:ring-2 focus:ring-neutral-900 focus:border-neutral-900 outline-none transition-all">
+              <input type="tel" name="telefone" required class="w-full px-4 py-2 border border-neutral-300 rounded-sm focus:ring-2 focus:ring-neutral-900 focus:border-neutral-900 outline-none transition-all">
             </div>
             <div>
               <label class="block text-sm font-medium text-neutral-700 mb-1">Área de interesse</label>
-              <select class="w-full px-4 py-2 border border-neutral-300 rounded-sm focus:ring-2 focus:ring-neutral-900 focus:border-neutral-900 outline-none transition-all">
-                <option>Direito Criminal</option>
-                <option>Direito de Família</option>
-                <option>Direito Previdenciário</option>
-                <option>Direito Civil</option>
-                <option>Outros</option>
+              <select name="area" class="w-full px-4 py-2 border border-neutral-300 rounded-sm focus:ring-2 focus:ring-neutral-900 focus:border-neutral-900 outline-none transition-all">
+                <option value="Direito Criminal">Direito Criminal</option>
+                <option value="Direito de Família">Direito de Família</option>
+                <option value="Direito Previdenciário">Direito Previdenciário</option>
+                <option value="Direito Civil">Direito Civil</option>
+                <option value="Outros">Outros</option>
               </select>
             </div>
             <div>
               <label class="block text-sm font-medium text-neutral-700 mb-1">Mensagem (breve relato)</label>
-              <textarea rows="4" required class="w-full px-4 py-2 border border-neutral-300 rounded-sm focus:ring-2 focus:ring-neutral-900 focus:border-neutral-900 outline-none transition-all"></textarea>
+              <textarea name="mensagem" rows="4" required class="w-full px-4 py-2 border border-neutral-300 rounded-sm focus:ring-2 focus:ring-neutral-900 focus:border-neutral-900 outline-none transition-all"></textarea>
             </div>
             <div class="pt-2">
               <button type="submit" class="w-full bg-neutral-900 text-white px-6 py-3 rounded-sm font-medium hover:bg-neutral-800 transition-colors">Enviar Mensagem</button>
@@ -465,10 +465,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const form = document.getElementById('contact-form');
   if(form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      alert('Formulário enviado com sucesso. Retornaremos o contato em breve.');
-      form.reset();
+      const btn = form.querySelector('button[type="submit"]');
+      const originalText = btn.textContent;
+      btn.textContent = 'Enviando...';
+      btn.disabled = true;
+
+      const formData = new FormData(form);
+      const action = form.getAttribute('action');
+      
+      try {
+        const response = await fetch(action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+        
+        if (response.ok) {
+          alert('Formulário enviado com sucesso. Retornaremos o contato em breve.');
+          form.reset();
+        } else {
+          alert('Ocorreu um erro ao enviar o formulário. Verifique o endpoint do Formspree ou tente novamente mais tarde.');
+        }
+      } catch (error) {
+        alert('Ocorreu um erro ao enviar o formulário. Tente novamente ou entre em contato pelo WhatsApp.');
+      } finally {
+        btn.textContent = originalText;
+        btn.disabled = false;
+      }
     });
   }
 });
